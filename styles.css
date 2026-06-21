@@ -5,6 +5,15 @@
     --main-color: rgb(0, 245, 188);
 }
 
+html, body {
+    scroll-behavior: smooth;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
 
 /* everything's padding 0,margin 0 */
 * {
@@ -23,6 +32,31 @@ body {
 .text-green {
     color: var(--main-color);
 }
+
+.rocket {
+    width: 50px;
+    transform: rotate(-45deg);
+    position: fixed;
+    right: 10px;
+    bottom: 40px;
+    animation: move 0.6s linear infinite alternate;
+}
+
+
+
+@keyframes move {
+    form {
+        transform: translateY(0) rotate(-45deg);
+    }
+
+    to {
+
+        transform: translateY(-10px) rotate(-45deg);
+    }
+}
+
+
+
 
 .font-ops {
     font-family: "Black Ops One", system-ui;
@@ -174,7 +208,82 @@ body {
 }
 
 
+.tech {
+    width: 70%;
+    margin: auto;
+    padding: 2rem;
+}
 
+.t-top {
+    align-items: center;
+    gap: 1rem;
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.t-bottom {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.t-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: #1D1D1D;
+    padding: 1rem;
+    border-radius: 5px;
+    width: 32%;
+}
+
+
+.footer {
+    padding: 2rem;
+}
+
+
+form {
+    width: 50%;
+    margin: auto;
+}
+
+input, textarea {
+    padding: 0.7rem;
+    border-radius: 5px;
+    width: 100%;
+    margin: 0.5rem 0;
+    background-color: transparent;
+    border: 1px solid lightgray;
+}
+
+input:focus, textarea:focus {
+    box-shadow: 1px 1px 5px 2px var(--main-color);
+}
+
+.f-top {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+textarea {
+    height: 100px;
+
+    width: 100%;
+}
+
+
+.submit {
+    width: 100%;
+    padding: 0.7rem;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--main-color);
+}
 
 
 @media (max-width:1100px) {
@@ -184,6 +293,12 @@ body {
 
     .desc {
         width: 60%;
+    }
+}
+
+@media (max-width:900px) {
+    .tech {
+        width: 95%;
     }
 }
 
@@ -225,6 +340,12 @@ body {
 
 }
 
+@media (max-width:700px) {
+    .t-card {
+        width: 100%;
+    }
+}
+
 @media (max-width:550px) {
     .menu-items {
         display: none;
@@ -232,6 +353,10 @@ body {
 
     .list {
         display: block;
+    }
+
+    form {
+        width: 90%;
     }
 }
 
